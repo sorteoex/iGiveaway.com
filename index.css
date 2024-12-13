@@ -794,10 +794,12 @@ h1 {
     display: flex;
     gap: 0.5rem;
     margin-top: 1rem;
+    flex-wrap: wrap;
 }
 
 .code-input input {
     flex: 1;
+    min-width: 200px;
     padding: 0.8rem;
     border: 1px solid var(--border-color);
     border-radius: 8px;
@@ -810,6 +812,7 @@ h1 {
     border: none;
     border-radius: 8px;
     cursor: pointer;
+    width: 100%;
 }
 
 @keyframes modalSlideIn {
@@ -1164,6 +1167,22 @@ h1 {
 
     .modal-body {
         padding: 1rem;
+    }
+}
+
+/* Ajustes responsive para el input de código */
+@media (max-width: 768px) {
+    .code-input {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .code-input input {
+        width: 100%;
+    }
+
+    #validateCode {
+        margin-top: 0.5rem;
     }
 }
 
