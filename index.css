@@ -697,8 +697,8 @@ h1 {
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0,0.5);
-    align-items: center;
-    justify-content: center;
+    overflow-y: auto;
+    padding: 20px;
 }
 
 .modal-content {
@@ -708,6 +708,8 @@ h1 {
     width: 90%;
     max-width: 500px;
     position: relative;
+    margin: 20px auto;
+    transform: none;
 }
 
 .modal-header {
@@ -1146,3 +1148,22 @@ h1 {
         transform: translateX(25px);
     }
 }
+
+/* Ajustes responsive para el modal */
+@media (max-width: 768px) {
+    .modal {
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .modal-content {
+        margin: 10px auto;
+        width: 95%;
+        padding: 15px;
+    }
+
+    .modal-body {
+        padding: 1rem;
+    }
+}
+
